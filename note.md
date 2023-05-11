@@ -16,4 +16,10 @@ ng serve -o
 
 - Vào trong angular.json thêm đường dẫn cho bootstrap tại achitect > build -> styles
 
-4. Generate interface
+4. Tạo component mới:
+   `ng g c pages/home`
+   `ng g c components/header`
+
+- Vào file template (html) của app component để thêm component home:
+
+  `<app-home></app-home>`
