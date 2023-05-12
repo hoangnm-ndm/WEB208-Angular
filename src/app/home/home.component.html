@@ -1,13 +1,9 @@
 <section id="home-section">
   <div class="container">
     <div class="row">
-      <div class="col">
-        <div *ngFor="let product of products" class="card" style="width: 18rem">
+      <div class="col-4" *ngFor="let product of products">
+        <div class="card" style="width: 18rem">
           <div class="card-body">
-            <!-- <h5 class="card-title">Tên: {{ user.name }}</h5>
-            <p class="card-text">Tuổi: {{ user.age }}</p>
-            <p class="card-text">Địa chỉ: {{ user.address }}</p>
-            <a href="#" class="btn btn-primary">Send Mail</a> -->
             <img src="{{ product.imgUrl }}" alt="" class="card-img-top" />
             <h5 class="card-title">{{ product.name }}</h5>
             <p class="card-text">Giá: {{ product.price }}</p>
