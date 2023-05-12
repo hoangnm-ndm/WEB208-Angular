@@ -7,8 +7,9 @@ import { Product } from 'src/app/common/product';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
-  show = true;
-  show(id) {}
+  toggleDescription(product: any) {
+    product.isDescriptionVisible = !product.isDescriptionVisible;
+  }
   products: Product[] = [
     {
       id: '1',
@@ -17,6 +18,7 @@ export class HomeComponent {
       description: 'lorem ipsum dolor sit amet, consectetur adip',
       imgUrl:
         'https://file.hstatic.net/200000053174/file/cac-loai-ao-vest-nam_07a5c0b0bfee420b8edc3225a9529187.jpg',
+      isDescriptionVisible: false,
     },
     {
       id: '2',
@@ -25,6 +27,7 @@ export class HomeComponent {
       description: 'lorem ipsum',
       imgUrl:
         'https://file.hstatic.net/200000053174/file/cac-loai-ao-vest-nam_07a5c0b0bfee420b8edc3225a9529187.jpg',
+      isDescriptionVisible: false,
     },
     {
       id: '3',
@@ -34,6 +37,7 @@ export class HomeComponent {
         'Product 1 description Product 1 descriptionProduct 1 descriptionProduct 1 description',
       imgUrl:
         'https://file.hstatic.net/200000053174/file/cac-loai-ao-vest-nam_07a5c0b0bfee420b8edc3225a9529187.jpg',
+      isDescriptionVisible: false,
     },
   ];
 }

@@ -4,4 +4,5 @@ export interface Product {
   price: number;
   description: string;
   imgUrl: string;
+  isDescriptionVisible: boolean;
 }

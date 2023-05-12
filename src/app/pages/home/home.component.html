@@ -9,10 +9,13 @@
             <p class="card-text">
               {{ product.price }}
             </p>
-            <button class="btn btn-primary" (click)="show = !show">
-              {{ show ? "hide" : "show" }}
+            <button
+              class="btn btn-primary"
+              (click)="toggleDescription(product)"
+            >
+              show
             </button>
-            <p *ngIf="show" class="card-text">
+            <p *ngIf="product.isDescriptionVisible" class="card-text">
               {{ product.description }}
             </p>
           </div>
