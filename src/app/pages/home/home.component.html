@@ -7,12 +7,14 @@
           <div class="card-body">
             <h5 class="card-title">{{ product.name }}</h5>
             <p class="card-text">
-              {{ product.description }}
-            </p>
-            <p class="card-text">
               {{ product.price }}
             </p>
-            <a href="#" class="btn btn-primary">Xem chi tiết!</a>
+            <button class="btn btn-primary" (click)="show = !show">
+              {{ show ? "hide" : "show" }}
+            </button>
+            <p *ngIf="show" class="card-text">
+              {{ product.description }}
+            </p>
           </div>
         </div>
       </div>
