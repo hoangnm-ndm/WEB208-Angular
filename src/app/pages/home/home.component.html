@@ -1,15 +1,21 @@
 <section id="home-section">
   <div class="container">
-    <div class="col">
-      <div class="row">
-        <ol class="user-item">
-          <!-- <h3>Họ và tên: {{ user.name }}</h3>
-          <p>Mã định danh: {{ user.id }}</p>
-          <p>Tuổi: {{ user.age }}</p>
-          <p>Địa chỉ: {{ user.address }}</p> -->
-
-          <li class="item" *ngFor="let item of danhSachNYC">{{ item.name }}</li>
-        </ol>
+    <div class="row">
+      <div class="col-4" *ngFor="let product of products">
+        <div class="card product-item">
+          <img
+            src="{{ product.image }}"
+            class="card-img-top"
+            alt="{{ product.name }}"
+          />
+          <div class="card-body">
+            <div class="card-title">
+              {{ product.name }}
+            </div>
+            <p class="card-text">Price: {{ product.price }}</p>
+            <button class="btn btn-primary">Xem chi tiết</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>

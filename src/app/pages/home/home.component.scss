@@ -9,3 +9,11 @@
     text-transform: capitalize;
   }
 }
+
+.product-item {
+  img {
+    height: 200px;
+    min-height: 200px;
+    overflow: hidden;
+  }
+}
