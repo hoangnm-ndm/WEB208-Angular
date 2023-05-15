@@ -14,6 +14,7 @@ import { ServicesComponent } from './pages/services/services.component';
 import { AboutComponent } from './pages/about/about.component';
 import { SaleComponent } from './pages/sale/sale.component';
 import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,13 +29,10 @@ import { ResetPasswordComponent } from './pages/reset-password/reset-password.co
     ServicesComponent,
     AboutComponent,
     SaleComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
