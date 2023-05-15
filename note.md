@@ -9,3 +9,8 @@ ng new routing-app --routing --defaults
 ```
 
 Bước 3: Thêm <router-outlet></router-oulet> vào vị trí cần hiện thị component theo từng router.
+
+#BTVN:
+
+1. Nhóm có nhóm trưởng, chọn xong đề tài
+2. Tạo routing với ít nhất 4 trang cơ bản như: homepage, detailpage, login, register, notfoundPage

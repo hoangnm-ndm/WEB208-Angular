@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
-  hocky = 2;
+  title = 'Login';
+  name = 'WD17308';
 }
