@@ -10,6 +10,8 @@ import { CategoryComponent } from './pages/category/category.component';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FooterComponent,
     CategoryComponent,
     NotFoundPageComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, MatSlideToggleModule, BrowserAnimationsModule],
   providers: [],
