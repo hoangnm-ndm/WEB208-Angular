@@ -1,1 +1,4 @@
-<p>not-found-page works!</p>
+<h1>{{ "Ten toi la: " + name }}</h1>
+<input type="text" value="{{ name }}" />
+<input type="text" [value]="'Ten toi la: ' + name" />
+<input type="text" [(ngModel)]="name" />
