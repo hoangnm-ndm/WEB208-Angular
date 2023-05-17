@@ -15,7 +15,7 @@ import { ServicesComponent } from './pages/services/services.component';
 
 const routes: Routes = [
   {
-    path: '/',
+    path: '',
     component: LayoutComponent,
     children: [
       { path: '', component: HomeComponent },
@@ -29,14 +29,17 @@ const routes: Routes = [
   },
 
   {
-    path: '/admin',
-    component: LayoutAdminComponent, children: [
-      {path: '', component: DashboardComponent},
+    path: 'admin',
+    component: LayoutAdminComponent,
+    children: [
+      { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+      { path: 'dashboard', component: DashboardComponent },
       {
-        path: '/products', component: ProductComponent
-      }
-    ]
-  }
+        path: 'products',
+        component: ProductComponent,
+      },
+    ],
+  },
 
   {
     path: '**',
