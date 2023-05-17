@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ButtonModule } from 'primeng/button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +17,10 @@ import { AboutComponent } from './pages/about/about.component';
 import { SaleComponent } from './pages/sale/sale.component';
 import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
 import { FormsModule } from '@angular/forms';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { ProductComponent } from './admin/product/product.component';
+import { LayoutComponent } from './layout/layout.component';
+import { LayoutAdminComponent } from './admin/layout-admin/layout-admin.component';
 
 @NgModule({
   declarations: [
@@ -30,8 +36,18 @@ import { FormsModule } from '@angular/forms';
     AboutComponent,
     SaleComponent,
     ResetPasswordComponent,
+    DashboardComponent,
+    ProductComponent,
+    LayoutComponent,
+    LayoutAdminComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    ButtonModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
