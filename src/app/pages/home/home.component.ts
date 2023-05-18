@@ -7,11 +7,5 @@ import { product } from 'src/app/datas/mockData';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
-  user = {
-    id: '1',
-    name: 'John Doe',
-    age: 32,
-    address: 'VN',
-  };
   products = product;
 }
