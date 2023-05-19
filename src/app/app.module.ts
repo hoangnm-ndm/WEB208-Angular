@@ -14,8 +14,9 @@ import { LayoutAdminComponent } from './layouts/layout-admin/layout-admin.compon
 import { LayoutComponent } from './layouts/layout/layout.component';
 import { HeaderAdminComponent } from './components/header-admin/header-admin.component';
 import { SidebarAdminComponent } from './components/sidebar-admin/sidebar-admin.component';
-import { ProductComponent } from './pages/admin/product/product.component';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
+import { LayoutClientComponent } from './components/layouts/layout-client/layout-client.component';
+import { ProductsComponent } from './pages/admin/products/products.component';
 
 @NgModule({
   declarations: [
@@ -30,8 +31,9 @@ import { DashboardComponent } from './pages/admin/dashboard/dashboard.component'
     LayoutComponent,
     HeaderAdminComponent,
     SidebarAdminComponent,
-    ProductComponent,
     DashboardComponent,
+    LayoutClientComponent,
+    ProductsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

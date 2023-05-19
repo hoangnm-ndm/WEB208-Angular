@@ -3,25 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { LayoutAdminComponent } from './layouts/layout-admin/layout-admin.component';
 import { LayoutComponent } from './layouts/layout/layout.component';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
-import { ProductComponent } from './pages/admin/product/product.component';
+import { ProductsComponent } from './pages/admin/products/products.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { RegisterComponent } from './pages/register/register.component';
-
 const routes: Routes = [
-  // Ứng dụng phía máy chủ: (admin)
-  {
-    path: 'admin',
-    component: LayoutAdminComponent,
-    children: [
-      { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-      { path: 'dashboard', component: DashboardComponent },
-      { path: 'products', component: ProductComponent },
-    ],
-  },
-
-  // ứng dụng phía khách:
+  // Ứng dụng phía máy khách:
   {
     path: '',
     component: LayoutComponent,
@@ -36,6 +24,28 @@ const routes: Routes = [
     ],
   },
 
+  // Ứng dụng phía admin:
+  {
+    path: 'admin',
+    component: LayoutAdminComponent,
+    children: [
+      {
+        path: '',
+        redirectTo: 'dashboard',
+        pathMatch: 'full',
+      },
+
+      {
+        path: 'dashboard',
+        component: DashboardComponent,
+      },
+
+      {
+        path: 'products',
+        component: ProductsComponent,
+      },
+    ],
+  },
   {
     path: '**',
     component: NotFoundComponent,
