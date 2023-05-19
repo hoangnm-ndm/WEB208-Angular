@@ -22,6 +22,14 @@ import { LayoutComponent } from './layout/layout.component';
 import { LayoutAdminComponent } from './admin/layout-admin/layout-admin.component';
 import { HeaderAdminComponent } from './admin/components/header-admin/header-admin.component';
 import { FooterAdminComponent } from './admin/components/footer-admin/footer-admin.component';
+import { SidebarAdminComponent } from './components/sidebar-admin/sidebar-admin.component';
+import { NZ_I18N } from 'ng-zorro-antd/i18n';
+import { en_US } from 'ng-zorro-antd/i18n';
+import { registerLocaleData } from '@angular/common';
+import en from '@angular/common/locales/en';
+import { HttpClientModule } from '@angular/common/http';
+
+registerLocaleData(en);
 
 @NgModule({
   declarations: [
@@ -43,14 +51,18 @@ import { FooterAdminComponent } from './admin/components/footer-admin/footer-adm
     LayoutAdminComponent,
     HeaderAdminComponent,
     FooterAdminComponent,
+    SidebarAdminComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    { provide: NZ_I18N, useValue: en_US }
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
