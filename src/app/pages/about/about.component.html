@@ -1,1 +1,3 @@
-<p>about works!</p>
+<div *ngFor="let author of authors; index as i; count as sum">
+  {{ i + 1 }}/{{ sum }}: {{ author.id }} - {{ author.name }}
+</div>
