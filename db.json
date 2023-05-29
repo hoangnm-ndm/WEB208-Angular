@@ -1,9 +1,16 @@
 {
   "products": [
-    { "id": 1, "name": "Product 1", "price": 200 },
-    { "id": 2, "name": "Product 2", "price": 200 }
-  ],
-  "posts": [{ "id": 1, "title": "json-server", "author": "typicode" }],
-  "comments": [{ "id": 1, "body": "some comment", "postId": 1 }],
-  "profile": { "name": "typicode" }
+    {
+      "id": 1,
+      "name": "Product 1",
+      "price": 200,
+      "desc": "mo ta"
+    },
+    {
+      "id": 2,
+      "name": "Product 2",
+      "price": 200,
+      "desc": "mo ta"
+    }
+  ]
 }
