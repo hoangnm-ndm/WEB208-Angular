@@ -9,7 +9,6 @@ import { ProductService } from 'src/app/product-service.service';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  // products = products;
   products: any[] | undefined;
   constructor(private productService: ProductService, private router: Router) {}
 
@@ -29,14 +28,6 @@ export class HomeComponent implements OnInit {
   }
 
   navigateToDetail(productId: string) {
-    this.router.navigate(['/', productId]);
+    this.router.navigate(['/product/', productId]);
   }
-
-  deleteProduct(productId: string) {
-    this.router.navigate(['/', productId]);
-  }
-
-  // createProduct(product: Product) {
-  //   this.router.navigate("/create",)
-  // }
 }

@@ -1,12 +1,10 @@
 <div class="container">
   <h2>Product List</h2>
-  <button>Create New</button>
   <ul class="row">
     <li *ngFor="let product of products" class="col-3 product">
       <h3>{{ product.name }}</h3>
       <p>Giá: {{ product.price }}</p>
       <p>Mô tả: {{ product.description }}</p>
-      <button (click)="deleteProduct(product.id)">Delete</button>
       <button (click)="navigateToDetail(product.id)">View Details</button>
     </li>
   </ul>

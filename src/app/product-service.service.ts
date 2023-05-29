@@ -30,18 +30,18 @@ export class ProductService {
     // );
   }
 
-  private handleError(error: HttpErrorResponse): Observable<never> {
-    let errorMessage = 'Đã xảy ra lỗi';
-    if (error.error instanceof ErrorEvent) {
-      // Xử lý lỗi client-side
-      errorMessage = error.error.message;
-    } else {
-      // Xử lý lỗi server-side
-      errorMessage = `Mã lỗi: ${error.status}\nThông báo: ${error.error.message}`;
-    }
-    console.error(errorMessage);
-    return throwError(errorMessage);
-  }
+  // private handleError(error: HttpErrorResponse): Observable<never> {
+  //   let errorMessage = 'Đã xảy ra lỗi';
+  //   if (error.error instanceof ErrorEvent) {
+  //     // Xử lý lỗi client-side
+  //     errorMessage = error.error.message;
+  //   } else {
+  //     // Xử lý lỗi server-side
+  //     errorMessage = `Mã lỗi: ${error.status}\nThông báo: ${error.error.message}`;
+  //   }
+  //   console.error(errorMessage);
+  //   return throwError(errorMessage);
+  // }
 
   getProduct(id: string): Observable<any> {
     const url = `${this.apiUrl}/${id}`;
