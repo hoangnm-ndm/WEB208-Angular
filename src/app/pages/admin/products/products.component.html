@@ -1,26 +1,23 @@
+<a routerLink="" class="btn btn-danger">Thêm mới</a>
 <table class="table-border table">
   <thead>
     <tr>
       <th>STT</th>
       <th>Tên</th>
       <th>Giá</th>
-      <th></th>
+      <th>Thao tác</th>
     </tr>
   </thead>
   <tbody>
-    <!-- ${product.map(item => <tr>${item.name}</tr>)} -->
     <tr *ngFor="let item of products; index as i">
       <td>{{ i + 1 }}</td>
-      <td>
-        <!-- <img width="50" [src]="item.img" /> -->
-      </td>
+      <td></td>
       <td>{{ item.name }}</td>
       <td>{{ item.price }}</td>
-      <!-- <td>
-        <button class="btn btn-danger" (click)="removeItem(item.id!)">
-          Xóa
-        </button>
-      </td> -->
+      <td>
+        <button class="btn btn-danger">Xóa</button>
+        <a routerLink="" class="btn btn-danger" class="btn btn-danger">Sửa</a>
+      </td>
     </tr>
   </tbody>
 </table>
