@@ -11,6 +11,12 @@
       "name": "Product 2",
       "price": 200,
       "desc": "mo ta"
+    },
+    {
+      "id": 3,
+      "name": "sfsfdf",
+      "price": 2020,
+      "desc": "dsdsd"
     }
   ]
 }

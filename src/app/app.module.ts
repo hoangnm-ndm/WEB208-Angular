@@ -19,6 +19,7 @@ import { DashboardComponent } from './pages/admin/dashboard/dashboard.component'
 import { ProductsComponent } from './pages/admin/products/products.component';
 import { LayoutAdminComponent } from './layouts/layout-admin/layout-admin.component';
 import { LayoutClientComponent } from './layouts/layout-client/layout-client.component';
+import { CreateProductComponent } from './pages/admin/create-product/create-product.component';
 
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -36,6 +37,7 @@ import { LayoutClientComponent } from './layouts/layout-client/layout-client.com
     ProductsComponent,
     LayoutAdminComponent,
     LayoutClientComponent,
+    CreateProductComponent,
   ],
   imports: [
     BrowserModule,

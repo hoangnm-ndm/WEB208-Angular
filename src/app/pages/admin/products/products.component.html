@@ -1,22 +1,22 @@
-<a routerLink="" class="btn btn-danger">Thêm mới</a>
-<table class="table-border table">
+<h2>Product List</h2>
+<a routerLink="/admin/create-product" class="btn btn-primary">Create Product</a>
+<table>
   <thead>
     <tr>
-      <th>STT</th>
-      <th>Tên</th>
-      <th>Giá</th>
-      <th>Thao tác</th>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Actions</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let item of products; index as i">
-      <td>{{ i + 1 }}</td>
-      <td></td>
-      <td>{{ item.name }}</td>
-      <td>{{ item.price }}</td>
+    <tr *ngFor="let product of products">
+      <td>{{ product.id }}</td>
+      <td>{{ product.name }}</td>
+      <td>{{ product.price }}</td>
       <td>
-        <button class="btn btn-danger">Xóa</button>
-        <a routerLink="" class="btn btn-danger" class="btn btn-danger">Sửa</a>
+        <button (click)="deleteProduct(product.id)">Delete</button>
+        <button (click)="updateProduct(product.id, product)">Update</button>
       </td>
     </tr>
   </tbody>

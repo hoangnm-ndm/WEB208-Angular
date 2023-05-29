@@ -1,0 +1,38 @@
+<h2>Create Product</h2>
+
+<form>
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input
+      type="text"
+      id="name"
+      class="form-control"
+      [(ngModel)]="product.name"
+      name="name"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="price">Price:</label>
+    <input
+      type="number"
+      id="price"
+      class="form-control"
+      [(ngModel)]="product.price"
+      name="price"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="desc">Description:</label>
+    <input
+      type="string"
+      id="desc"
+      class="form-control"
+      [(ngModel)]="product.desc"
+      name="desc"
+    />
+  </div>
+
+  <button class="btn btn-primary" (click)="createProduct()">Save</button>
+</form>

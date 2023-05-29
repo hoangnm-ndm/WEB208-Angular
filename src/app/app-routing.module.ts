@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LayoutAdminComponent } from './layouts/layout-admin/layout-admin.component';
 import { LayoutClientComponent } from './layouts/layout-client/layout-client.component';
 import { AboutComponent } from './pages/about/about.component';
+import { CreateProductComponent } from './pages/admin/create-product/create-product.component';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 import { ProductsComponent } from './pages/admin/products/products.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -30,6 +31,7 @@ const routes: Routes = [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', component: DashboardComponent },
       { path: 'products', component: ProductsComponent },
+      { path: 'create-product', component: CreateProductComponent },
     ],
   },
 

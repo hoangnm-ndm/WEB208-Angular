@@ -17,5 +17,14 @@ export class ProductsComponent {
       this.products = data;
     });
   }
-  public removeItem(): void {}
+
+  updateProduct(id: string, product: IProduct): void {
+    this.productService.updateProduct(id, product).subscribe();
+  }
+
+  deleteProduct(id: string): void {
+    this.productService.deleteProduct(id).subscribe(() => {
+      this.products = this.products.filter((p) => p.id !== id);
+    });
+  }
 }
