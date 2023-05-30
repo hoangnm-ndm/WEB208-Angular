@@ -18,5 +18,12 @@
       "price": 2020,
       "desc": "dsdsd"
     }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "1234567"
+    }
   ]
 }
